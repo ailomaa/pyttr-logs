@@ -1,0 +1,541 @@
+True
+True
+['j', 'k', 'l', 'm', 'n']
+False
+_a0
+run(j)
+True
+['_e0']
+True
+True
+True
+['_e1']
+True
+False
+True
+True
+[]
+['_a1']
+['_a1']
+_a2
+True
+True
+_a3
+['a', 'b', '_a3']
+[Ind]
+True
+[T4]
+[T0, T1, (T0&T1)]
+True
+True
+True
+True
+False
+True
+Meet types are logical and cannot learn new conditions
+j
+True
+True
+h14
+True
+False
+lambda x:Ind . run(x)
+run(j)
+run(j)
+lambda x:Ind . run(x)(x): badly typed function application
+None
+True
+True
+True
+True
+Ty is a logical type and cannot learn new conditions
+True
+False
+lambda x:Ind . man(x)
+love(j, m)
+love(m, j)
+True
+[Ind]
+True
+True
+False
+False
+Ind_j
+[Ind]_[j, k]
+True
+Ind_j
+True
+True
+True
+man(j)
+man(j)
+True
+True
+
+M:
+_____________________________________________
+man(j): [_e1]
+_____________________________________________
+
+True
+True
+True
+False
+True
+True
+
+M:
+_____________________________________________
+man(j): [_e1]
+Ind: [j, k, l, m, n, _a0]
+_____________________________________________
+
+True
+True
+{c : (lambda v:Ind . man(v), [x]), x : Ind}
+{c = _e2, x = _a4}
+
+M:
+_____________________________________________
+man(_a4): [_e2]
+man(j): [_e1]
+Ind: [j, k, l, m, n, _a0, _a4]
+_____________________________________________
+
+True
+True
+True
+True
+True
+{c : {c : (lambda v:Ind . man(v), [x])}, x : Ind}
+False
+True
+True
+False
+True
+True
+{y = _a6, x = _a6, e = {e = _e4}}
+True
+[{y = j, x = j, e = {e = _e1}}]
+True
+False
+True
+True
+True
+True
+True
+True
+False
+
+
+Example 47:
+
+lambda v:Ind . man(v)(h38): badly typed function application
+Unresolved dependency in {x : Ty, e : (lambda v:Ind . man(v), [x])}
+None
+
+
+Example 48:
+
+True
+
+
+Example 49:
+
+False
+
+
+Example 50:
+
+{x = {x = _a7, e = _e5}}
+
+
+Example 51:
+
+_T0
+
+
+Example 52:
+
+True
+
+
+Example 53:
+
+False
+
+
+Example 54:
+
+True
+
+
+Example 55:
+
+{y = _a8, x = {x = _a9, e = _e6}}
+
+
+Example 56:
+
+{y = h46, x = {x = h47, e = h48}}
+
+
+Example 57:
+
+True
+
+
+Example 58:
+
+False
+
+
+Example 59:
+
+True
+
+
+Example 60:
+
+{y = _a10, x = {x = _a10, e = _e7}}
+{y = h55, x = {x = h55, e = h56}}
+
+
+Example 61:
+
+True
+
+
+Example 62:
+
+False
+
+
+Example 63:
+
+False
+
+
+Example 64:
+
+x not a label in {}
+lambda v:Ind . Ind_v(None): badly typed function application
+y not a label in {}
+lambda v:Ind . Ind_v(None): badly typed function application
+Unresolved dependency in {y : (lambda v:Ind . Ind_v, [x]), x : (lambda v:Ind . Ind_v, [y])}
+None
+
+
+Example 65:
+
+x not a label in {}
+lambda v:Ind . Ind_v(None): badly typed function application
+y not a label in {}
+lambda v:Ind . Ind_v(None): badly typed function application
+Unresolved dependency in {y : (lambda v:Ind . Ind_v, [x]), x : (lambda v:Ind . Ind_v, [y])}
+None
+
+
+Example 66:
+
+True
+
+
+Example 67:
+
+False
+
+
+Example 68:
+
+True
+
+
+Example 69:
+
+True
+
+
+Example 70:
+
+True
+
+
+Example 71:
+
+True
+
+
+Example 72:
+
+{y = h67, x = h68, z = [h68, +, h67]}
+
+
+Example 73:
+
+{y = h69, x = [j], z = [[j], +, h69]}
+
+
+Example 74:
+
+{y = [m], x = [j], z = [j, m]}
+
+
+Example 75:
+
+True
+
+
+Example 76:
+
+False
+
+
+Example 77:
+
+{y = h76, w = h77, x = h78, z = [h78, @, h76]}
+
+
+Example 78:
+
+{y : Ind, w : Ind, x : (Ind->RecTy), z : (lambda f:(Ind->RecTy) . lambda v:Ind . RecTy_[f, @, v], [x, y])}
+
+
+Example 79:
+
+True
+
+
+Example 80:
+
+{y = h82, w = h83, x = h84, z = [h84, @, h82]}
+
+
+Example 81:
+
+True
+
+
+Example 82:
+
+True
+
+
+Example 83:
+
+True
+
+
+Example 84:
+
+True
+
+
+Example 85:
+
+{c : (lambda v:Ind . man(v), [{x = j}.x])}
+
+
+Example 86:
+
+{y : Ind, x : Ind}
+
+
+Example 87:
+
+{y : Ind, x : Ind}
+
+
+Example 88:
+
+RecTy
+
+
+Example 89:
+
+Ind
+
+
+Example 90:
+
+(IndvRecTy)
+
+
+Example 91:
+
+Ind
+
+
+Example 92:
+
+{a : Ind, b : Ind}
+
+
+Example 93:
+
+{c : Ind, a : Ind, b : Ind}
+
+
+Example 94:
+
+{y : (lambda v0:Ind . {c : man(v0), a : Ind}, [x]), w : Ind, x : Ind, z : Ind}
+
+
+Example 95:
+
+{y : (lambda v1:Ind . lambda v2:Ind . {c : (man(v1)&man(v2)), a : Ind}, [x, z]), x : Ind, z : Ind}
+
+
+Example 96:
+
+{y : (lambda v3:Ind . lambda v4:Ind . {c : (man(v3)&man(v4)), a : Ind}, [x, z]), x : Ind_j, z : Ind_j}
+
+
+Example 97:
+
+{a : Ind_j, b : Ind}
+
+
+Example 98:
+
+{a : Ind}
+
+
+Example 99:
+
+{a : (man(j)&man(m))}
+
+
+Example 100:
+
+{x : Ind, e : (lambda v5:Ind . (man(v5)&man(j)), [x])}
+{x : Ind, e : (lambda v6:Ind . (man(j)&man(v6)), [x])}
+
+
+Example 101:
+
+RecTy
+
+
+Example 102:
+
+{agenda : [Ty]_[], latest_move : {e : run(j)}}
+
+
+Example 103:
+
+{agenda : [Ty]_[], latest_move : (lambda v:Ind . {e : run(v)}, [x]), x : Ind}
+
+
+Example 104:
+
+{x : Ind, e : (lambda v7:Ind . (run(v7)&man(v7)), [x])}
+{x : Ind, e : (lambda v:Ind . man(v), [x])}
+
+
+Example 105:
+
+{y : Ind, x : Ind, e : (lambda v8:Ind . lambda v9:Ind . (run(v8)&man(v9)), [x, y])}
+{y : Ind, x : Ind, e : (lambda v:Ind . man(v), [y])}
+
+
+Example 106:
+
+{y : Ind, x : Ind, e : (lambda v10:Ind . lambda v11:Ind . ({y : Ind, e : run(v10)}&man(v11)), [x, y])}
+{y : Ind, x : Ind, e : (lambda v:Ind . man(v), [y])}
+
+
+Example 107:
+
+{y : Ind, x : Ind, e : (lambda v12:Ind . lambda v13:Ind . {y : Ind, x : Ind, e : (run(v12)&man(v13))}, [x, y])}
+{y : Ind, x : Ind, e : (lambda v:Ind . {x : Ind, e : man(v)}, [y])}
+
+
+Example 108:
+
+"e1 e2"
+
+
+Example 109:
+
+run(j)^run(m)
+True
+run(j)^run(m) is a logical type and cannot learn new conditions
+None
+"_e8 _e9"
+"h128 h129"
+
+
+Example 110:
+
+RecTy+
+False
+True
+RecTy+ is a logical type and cannot learn new conditions
+None
+_sigma0
+h130
+
+
+Example 111:
+
+False
+False
+
+
+Example 112:
+
+False
+True
+
+
+Example 113:
+
+False
+False
+
+
+Example 114:
+
+{x : Ind}^{y : Ind}
+
+
+Example 115:
+
+{x : Ind}+
+
+
+Example 116:
+
+{x : Ind}^{y : Ind}
+{x : Ind}^{y : Ind}
+
+
+Example 117:
+
+{x : Ind}^{x : (Ind&Ty)}
+{x : Ind}^{x : Ty}
+
+
+Example 118:
+
+{x : Ind}+
+{x : Ind}+
+
+
+Example 119:
+
+({x : Ind}&Ty)+
+Ty+
+
+
+Example 120:
+
+({x : Ind}^{x : Ind}&{x : Ind}+)
+{x : Ind}+
+
+
+Example 121:
+
+({x : Ind}^{x : Ind}&Ty+)
+Ty+
