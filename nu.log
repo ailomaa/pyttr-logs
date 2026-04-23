@@ -25,10 +25,10 @@ Example 3:
 a       0  0  1  0  0
 b       0  0  0  1  0
 hug_n   0  1  0  0  0
-ptype2  2  1  1  1  0
-rel     2  1  0  0  0
-arg0    2  0  1  0  0
-arg1    2  0  0  1  0
+ptype2  *  1  1  1  0
+rel     *  1  0  0  0
+arg0    *  0  1  0  0
+arg1    *  0  0  1  0
 ------  -  -  -  -  -
 ---------  -  -  -  -  -  -  -  -
 a          0  0  0  0  1  0  0  0
@@ -40,10 +40,10 @@ arg0       0  0  1  0  0  0  0  0
 arg1       0  0  0  1  1  1  1  0
 c          0  0  1  0  0  0  0  0
 believe_n  0  1  0  0  0  0  0  0
-ptype2     2  0  0  1  1  1  0  0
-rel        2  0  0  1  0  0  0  0
-arg0       2  0  0  0  1  0  0  0
-arg1       2  0  0  0  0  1  0  0
+ptype2     *  0  0  1  1  1  0  0
+rel        *  0  0  1  0  0  0  0
+arg0       *  0  0  0  1  0  0  0
+arg1       *  0  0  0  0  1  0  0
 ---------  -  -  -  -  -  -  -  -
 
 
@@ -64,23 +64,34 @@ rel        0  0  0  0  0  0  0
 arg0       0  0  0  0  0  0  0
 arg1       0  0  0  0  0  0  0
 Ind_n      0  1  0  0  0  0  0
-lambda     2  1  1  1  1  1  0
-dom        2  1  0  0  0  0  0
-var        2  1  0  1  0  0  0
-rng        2  0  1  1  1  1  0
+lambda     *  1  1  1  1  1  0
+dom        *  1  0  0  0  0  0
+var        *  1  0  1  0  0  0
+rng        *  0  1  1  1  1  0
 ---------  -  -  -  -  -  -  -
-[[(14, 'lambda', 1), (15, 'dom', 1), (16, 'var', 1), (13, 'Ind_n', 1)],
- [(15, 'dom', 0),
-  (16, 'var', 0),
-  (13, 'Ind_n', 0),
-  (17, 'rng', 1),
-  (3, 'ptype2', 1),
-  (4, 'rel', 1),
-  (2, 'hug_n', 1)],
- [(4, 'rel', 0), (2, 'hug_n', 0), (5, 'arg0', 1), (16, 'var', 1)],
- [(5, 'arg0', 0), (16, 'var', 0), (6, 'arg1', 1), (1, 'b', 1)],
- [(3, 'ptype2', 0), (6, 'arg1', 0), (1, 'b', 0)],
- [(14, 'lambda', 0), (17, 'rng', 0)]]
+[[(np.int64(14), 'lambda', np.int64(1)),
+  (np.int64(15), 'dom', np.int64(1)),
+  (np.int64(16), 'var', np.int64(1)),
+  (np.int64(13), 'Ind_n', np.int64(1))],
+ [(np.int64(15), 'dom', np.int64(0)),
+  (np.int64(16), 'var', np.int64(0)),
+  (np.int64(13), 'Ind_n', np.int64(0)),
+  (np.int64(17), 'rng', np.int64(1)),
+  (np.int64(3), 'ptype2', np.int64(1)),
+  (np.int64(4), 'rel', np.int64(1)),
+  (np.int64(2), 'hug_n', np.int64(1))],
+ [(np.int64(4), 'rel', np.int64(0)),
+  (np.int64(2), 'hug_n', np.int64(0)),
+  (np.int64(5), 'arg0', np.int64(1)),
+  (np.int64(16), 'var', np.int64(1))],
+ [(np.int64(5), 'arg0', np.int64(0)),
+  (np.int64(16), 'var', np.int64(0)),
+  (np.int64(6), 'arg1', np.int64(1)),
+  (np.int64(1), 'b', np.int64(1))],
+ [(np.int64(3), 'ptype2', np.int64(0)),
+  (np.int64(6), 'arg1', np.int64(0)),
+  (np.int64(1), 'b', np.int64(0))],
+ [(np.int64(14), 'lambda', np.int64(0)), (np.int64(17), 'rng', np.int64(0))]]
 ---------  -  -  -  -  -  -  -  -  -
 a          0  0  0  0  0  0  0  0  0
 b          0  0  0  0  0  0  0  0  0
@@ -100,32 +111,43 @@ lambda     0  1  1  1  1  1  1  1  0
 dom        0  1  0  0  0  0  0  0  0
 var        0  1  0  0  1  0  0  0  0
 rng        0  0  1  1  1  1  1  1  0
-lambda     2  0  1  1  1  1  1  0  0
-dom        2  0  1  0  0  0  0  0  0
-var        2  0  1  0  0  1  0  0  0
-rng        2  0  0  1  1  1  1  0  0
+lambda     *  0  1  1  1  1  1  0  0
+dom        *  0  1  0  0  0  0  0  0
+var        *  0  1  0  0  1  0  0  0
+rng        *  0  0  1  1  1  1  0  0
 ---------  -  -  -  -  -  -  -  -  -
-[[(14, 'lambda', 1), (15, 'dom', 1), (16, 'var', 1), (13, 'Ind_n', 1)],
- [(15, 'dom', 0),
-  (16, 'var', 0),
-  (13, 'Ind_n', 0),
-  (17, 'rng', 1),
-  (18, 'lambda', 1),
-  (19, 'dom', 1),
-  (20, 'var', 1),
-  (13, 'Ind_n', 1)],
- [(19, 'dom', 0),
-  (20, 'var', 0),
-  (13, 'Ind_n', 0),
-  (21, 'rng', 1),
-  (3, 'ptype2', 1),
-  (4, 'rel', 1),
-  (2, 'hug_n', 1)],
- [(4, 'rel', 0), (2, 'hug_n', 0), (5, 'arg0', 1), (16, 'var', 1)],
- [(5, 'arg0', 0), (16, 'var', 0), (6, 'arg1', 1), (20, 'var', 1)],
- [(3, 'ptype2', 0), (6, 'arg1', 0), (20, 'var', 0)],
- [(18, 'lambda', 0), (21, 'rng', 0)],
- [(14, 'lambda', 0), (17, 'rng', 0)]]
+[[(np.int64(14), 'lambda', np.int64(1)),
+  (np.int64(15), 'dom', np.int64(1)),
+  (np.int64(16), 'var', np.int64(1)),
+  (np.int64(13), 'Ind_n', np.int64(1))],
+ [(np.int64(15), 'dom', np.int64(0)),
+  (np.int64(16), 'var', np.int64(0)),
+  (np.int64(13), 'Ind_n', np.int64(0)),
+  (np.int64(17), 'rng', np.int64(1)),
+  (np.int64(18), 'lambda', np.int64(1)),
+  (np.int64(19), 'dom', np.int64(1)),
+  (np.int64(20), 'var', np.int64(1)),
+  (np.int64(13), 'Ind_n', np.int64(1))],
+ [(np.int64(19), 'dom', np.int64(0)),
+  (np.int64(20), 'var', np.int64(0)),
+  (np.int64(13), 'Ind_n', np.int64(0)),
+  (np.int64(21), 'rng', np.int64(1)),
+  (np.int64(3), 'ptype2', np.int64(1)),
+  (np.int64(4), 'rel', np.int64(1)),
+  (np.int64(2), 'hug_n', np.int64(1))],
+ [(np.int64(4), 'rel', np.int64(0)),
+  (np.int64(2), 'hug_n', np.int64(0)),
+  (np.int64(5), 'arg0', np.int64(1)),
+  (np.int64(16), 'var', np.int64(1))],
+ [(np.int64(5), 'arg0', np.int64(0)),
+  (np.int64(16), 'var', np.int64(0)),
+  (np.int64(6), 'arg1', np.int64(1)),
+  (np.int64(20), 'var', np.int64(1))],
+ [(np.int64(3), 'ptype2', np.int64(0)),
+  (np.int64(6), 'arg1', np.int64(0)),
+  (np.int64(20), 'var', np.int64(0))],
+ [(np.int64(18), 'lambda', np.int64(0)), (np.int64(21), 'rng', np.int64(0))],
+ [(np.int64(14), 'lambda', np.int64(0)), (np.int64(17), 'rng', np.int64(0))]]
 
 
 Example 5:
@@ -135,53 +157,65 @@ every_n  0  1  0  0  0  0  0  0  0  0  0  0  0
 dog_n    0  0  0  1  0  0  0  0  0  0  0  0  0
 run_n    0  0  0  0  0  0  0  0  1  0  0  0  0
 Ind_n    0  0  1  0  0  0  0  1  0  0  0  0  0
-ptype2   2  1  1  1  1  1  1  1  1  1  1  1  0
-rel      2  1  0  0  0  0  0  0  0  0  0  0  0
-arg0     2  0  1  1  1  1  1  0  0  0  0  0  0
-arg1     2  0  0  0  0  0  0  1  1  1  1  1  0
-lambda   2  0  1  1  1  1  0  1  1  1  1  0  0
-dom      2  0  1  0  0  0  0  1  0  0  0  0  0
-var      2  0  1  0  1  0  0  1  0  1  0  0  0
-rng      2  0  0  1  1  1  0  0  1  1  1  0  0
-ptype1   2  0  0  1  1  0  0  0  1  1  0  0  0
-rel      2  0  0  1  0  0  0  0  1  0  0  0  0
-arg0     2  0  0  0  1  0  0  0  0  1  0  0  0
+ptype2   *  1  1  1  1  1  1  1  1  1  1  1  0
+rel      *  1  0  0  0  0  0  0  0  0  0  0  0
+arg0     *  0  1  1  1  1  1  0  0  0  0  0  0
+arg1     *  0  0  0  0  0  0  1  1  1  1  1  0
+lambda   *  0  1  1  1  1  0  1  1  1  1  0  0
+dom      *  0  1  0  0  0  0  1  0  0  0  0  0
+var      *  0  1  0  1  0  0  1  0  1  0  0  0
+rng      *  0  0  1  1  1  0  0  1  1  1  0  0
+ptype1   *  0  0  1  1  0  0  0  1  1  0  0  0
+rel      *  0  0  1  0  0  0  0  1  0  0  0  0
+arg0     *  0  0  0  1  0  0  0  0  1  0  0  0
 -------  -  -  -  -  -  -  -  -  -  -  -  -  -
-[[(4, 'ptype2', 1), (5, 'rel', 1), (0, 'every_n', 1)],
- [(5, 'rel', 0),
-  (0, 'every_n', 0),
-  (6, 'arg0', 1),
-  (8, 'lambda', 1),
-  (9, 'dom', 1),
-  (10, 'var', 1),
-  (3, 'Ind_n', 1)],
- [(9, 'dom', 0),
-  (10, 'var', 0),
-  (3, 'Ind_n', 0),
-  (11, 'rng', 1),
-  (12, 'ptype1', 1),
-  (13, 'rel', 1),
-  (1, 'dog_n', 1)],
- [(13, 'rel', 0), (1, 'dog_n', 0), (14, 'arg0', 1), (10, 'var', 1)],
- [(12, 'ptype1', 0), (14, 'arg0', 0), (10, 'var', 0)],
- [(8, 'lambda', 0), (11, 'rng', 0)],
- [(6, 'arg0', 0),
-  (7, 'arg1', 1),
-  (8, 'lambda', 1),
-  (9, 'dom', 1),
-  (10, 'var', 1),
-  (3, 'Ind_n', 1)],
- [(9, 'dom', 0),
-  (10, 'var', 0),
-  (3, 'Ind_n', 0),
-  (11, 'rng', 1),
-  (12, 'ptype1', 1),
-  (13, 'rel', 1),
-  (2, 'run_n', 1)],
- [(13, 'rel', 0), (2, 'run_n', 0), (14, 'arg0', 1), (10, 'var', 1)],
- [(12, 'ptype1', 0), (14, 'arg0', 0), (10, 'var', 0)],
- [(8, 'lambda', 0), (11, 'rng', 0)],
- [(4, 'ptype2', 0), (7, 'arg1', 0)]]
+[[(np.int64(4), 'ptype2', np.int64(1)),
+  (np.int64(5), 'rel', np.int64(1)),
+  (np.int64(0), 'every_n', np.int64(1))],
+ [(np.int64(5), 'rel', np.int64(0)),
+  (np.int64(0), 'every_n', np.int64(0)),
+  (np.int64(6), 'arg0', np.int64(1)),
+  (np.int64(8), 'lambda', np.int64(1)),
+  (np.int64(9), 'dom', np.int64(1)),
+  (np.int64(10), 'var', np.int64(1)),
+  (np.int64(3), 'Ind_n', np.int64(1))],
+ [(np.int64(9), 'dom', np.int64(0)),
+  (np.int64(10), 'var', np.int64(0)),
+  (np.int64(3), 'Ind_n', np.int64(0)),
+  (np.int64(11), 'rng', np.int64(1)),
+  (np.int64(12), 'ptype1', np.int64(1)),
+  (np.int64(13), 'rel', np.int64(1)),
+  (np.int64(1), 'dog_n', np.int64(1))],
+ [(np.int64(13), 'rel', np.int64(0)),
+  (np.int64(1), 'dog_n', np.int64(0)),
+  (np.int64(14), 'arg0', np.int64(1)),
+  (np.int64(10), 'var', np.int64(1))],
+ [(np.int64(12), 'ptype1', np.int64(0)),
+  (np.int64(14), 'arg0', np.int64(0)),
+  (np.int64(10), 'var', np.int64(0))],
+ [(np.int64(8), 'lambda', np.int64(0)), (np.int64(11), 'rng', np.int64(0))],
+ [(np.int64(6), 'arg0', np.int64(0)),
+  (np.int64(7), 'arg1', np.int64(1)),
+  (np.int64(8), 'lambda', np.int64(1)),
+  (np.int64(9), 'dom', np.int64(1)),
+  (np.int64(10), 'var', np.int64(1)),
+  (np.int64(3), 'Ind_n', np.int64(1))],
+ [(np.int64(9), 'dom', np.int64(0)),
+  (np.int64(10), 'var', np.int64(0)),
+  (np.int64(3), 'Ind_n', np.int64(0)),
+  (np.int64(11), 'rng', np.int64(1)),
+  (np.int64(12), 'ptype1', np.int64(1)),
+  (np.int64(13), 'rel', np.int64(1)),
+  (np.int64(2), 'run_n', np.int64(1))],
+ [(np.int64(13), 'rel', np.int64(0)),
+  (np.int64(2), 'run_n', np.int64(0)),
+  (np.int64(14), 'arg0', np.int64(1)),
+  (np.int64(10), 'var', np.int64(1))],
+ [(np.int64(12), 'ptype1', np.int64(0)),
+  (np.int64(14), 'arg0', np.int64(0)),
+  (np.int64(10), 'var', np.int64(0))],
+ [(np.int64(8), 'lambda', np.int64(0)), (np.int64(11), 'rng', np.int64(0))],
+ [(np.int64(4), 'ptype2', np.int64(0)), (np.int64(7), 'arg1', np.int64(0))]]
 --------------  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 every_n         0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
 dog_n           0  0  0  0  0  1  0  0  0  0  0  0  0  0  0
@@ -316,18 +350,33 @@ True
 
 Example 11:
 
-[[(10, 'rec', 1), (4, 'field', 1), (5, 'label', 1), (1, 'l_e', 1)],
- [(5, 'label', 0), (1, 'l_e', 0), (6, 'value', 1), (3, 's', 1)],
- [(6, 'value', 0), (3, 's', 0), (4, 'field', 0)],
- [(7, 'field', 1), (8, 'label', 1), (0, 'l_x', 1)],
- [(8, 'label', 0), (0, 'l_x', 0), (9, 'value', 1), (2, 'a', 1)],
- [(9, 'value', 0), (2, 'a', 0), (7, 'field', 0)],
- [(10, 'rec', 0)]]
+[[(np.int64(10), 'rec', np.int64(1)),
+  (np.int64(4), 'field', np.int64(1)),
+  (np.int64(5), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(5), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(6), 'value', np.int64(1)),
+  (np.int64(2), 'a', np.int64(1))],
+ [(np.int64(6), 'value', np.int64(0)),
+  (np.int64(2), 'a', np.int64(0)),
+  (np.int64(4), 'field', np.int64(0))],
+ [(np.int64(7), 'field', np.int64(1)),
+  (np.int64(8), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(8), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(9), 'value', np.int64(1)),
+  (np.int64(3), 's', np.int64(1))],
+ [(np.int64(9), 'value', np.int64(0)),
+  (np.int64(3), 's', np.int64(0)),
+  (np.int64(7), 'field', np.int64(0))],
+ [(np.int64(10), 'rec', np.int64(0))]]
 -----  -  -  -  -  -  -  -  -
-l_x    0  0  0  0  1  0  0  0
-l_e    0  1  0  0  0  0  0  0
-a      0  0  0  0  0  1  0  0
-s      0  0  1  0  0  0  0  0
+l_x    0  1  0  0  0  0  0  0
+l_e    0  0  0  0  1  0  0  0
+a      0  0  1  0  0  0  0  0
+s      0  0  0  0  0  1  0  0
 field  0  1  1  0  0  0  0  0
 label  0  1  0  0  0  0  0  0
 value  0  0  1  0  0  0  0  0
@@ -340,50 +389,65 @@ rec    0  1  1  1  1  1  1  0
 
 Example 12:
 
-[[(10, 'rec', 1), (4, 'field', 1), (5, 'label', 1), (1, 'l_e', 1)],
- [(5, 'label', 0),
-  (1, 'l_e', 0),
-  (6, 'value', 1),
-  (11, 'lambda', 1),
-  (12, 'dom', 1),
-  (13, 'var', 1),
-  (2, 'Ind_n', 1)],
- [(12, 'dom', 0),
-  (13, 'var', 0),
-  (2, 'Ind_n', 0),
-  (14, 'rng', 1),
-  (15, 'ptype1', 1),
-  (16, 'rel', 1),
-  (3, 'dog_n', 1)],
- [(16, 'rel', 0), (3, 'dog_n', 0), (17, 'arg0', 1), (13, 'var', 1)],
- [(15, 'ptype1', 0), (17, 'arg0', 0), (13, 'var', 0)],
- [(11, 'lambda', 0), (14, 'rng', 0)],
- [(0, 'l_x', 1)],
- [(0, 'l_x', 0)],
- [(6, 'value', 0), (4, 'field', 0)],
- [(7, 'field', 1), (8, 'label', 1), (0, 'l_x', 1)],
- [(8, 'label', 0), (0, 'l_x', 0), (9, 'value', 1), (2, 'Ind_n', 1)],
- [(9, 'value', 0), (2, 'Ind_n', 0), (7, 'field', 0)],
- [(10, 'rec', 0)]]
+[[(np.int64(10), 'rec', np.int64(1)),
+  (np.int64(4), 'field', np.int64(1)),
+  (np.int64(5), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(5), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(6), 'value', np.int64(1)),
+  (np.int64(2), 'Ind_n', np.int64(1))],
+ [(np.int64(6), 'value', np.int64(0)),
+  (np.int64(2), 'Ind_n', np.int64(0)),
+  (np.int64(4), 'field', np.int64(0))],
+ [(np.int64(7), 'field', np.int64(1)),
+  (np.int64(8), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(8), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(9), 'value', np.int64(1)),
+  (np.int64(11), 'lambda', np.int64(1)),
+  (np.int64(12), 'dom', np.int64(1)),
+  (np.int64(13), 'var', np.int64(1)),
+  (np.int64(2), 'Ind_n', np.int64(1))],
+ [(np.int64(12), 'dom', np.int64(0)),
+  (np.int64(13), 'var', np.int64(0)),
+  (np.int64(2), 'Ind_n', np.int64(0)),
+  (np.int64(14), 'rng', np.int64(1)),
+  (np.int64(15), 'ptype1', np.int64(1)),
+  (np.int64(16), 'rel', np.int64(1)),
+  (np.int64(3), 'dog_n', np.int64(1))],
+ [(np.int64(16), 'rel', np.int64(0)),
+  (np.int64(3), 'dog_n', np.int64(0)),
+  (np.int64(17), 'arg0', np.int64(1)),
+  (np.int64(13), 'var', np.int64(1))],
+ [(np.int64(15), 'ptype1', np.int64(0)),
+  (np.int64(17), 'arg0', np.int64(0)),
+  (np.int64(13), 'var', np.int64(0))],
+ [(np.int64(11), 'lambda', np.int64(0)), (np.int64(14), 'rng', np.int64(0))],
+ [(np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(0), 'l_x', np.int64(0))],
+ [(np.int64(9), 'value', np.int64(0)), (np.int64(7), 'field', np.int64(0))],
+ [(np.int64(10), 'rec', np.int64(0))]]
 ------  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-l_x     0  0  0  0  0  0  0  1  0  0  1  0  0  0
-l_e     0  1  0  0  0  0  0  0  0  0  0  0  0  0
-Ind_n   0  0  1  0  0  0  0  0  0  0  0  1  0  0
-dog_n   0  0  0  1  0  0  0  0  0  0  0  0  0  0
-field   0  1  1  1  1  1  1  1  1  0  0  0  0  0
+l_x     0  1  0  0  0  0  0  0  0  0  1  0  0  0
+l_e     0  0  0  0  1  0  0  0  0  0  0  0  0  0
+Ind_n   0  0  1  0  0  1  0  0  0  0  0  0  0  0
+dog_n   0  0  0  0  0  0  1  0  0  0  0  0  0  0
+field   0  1  1  0  0  0  0  0  0  0  0  0  0  0
 label   0  1  0  0  0  0  0  0  0  0  0  0  0  0
-value   0  0  1  1  1  1  1  1  1  0  0  0  0  0
-field   0  0  0  0  0  0  0  0  0  0  1  1  0  0
-label   0  0  0  0  0  0  0  0  0  0  1  0  0  0
-value   0  0  0  0  0  0  0  0  0  0  0  1  0  0
+value   0  0  1  0  0  0  0  0  0  0  0  0  0  0
+field   0  0  0  0  1  1  1  1  1  1  1  1  0  0
+label   0  0  0  0  1  0  0  0  0  0  0  0  0  0
+value   0  0  0  0  0  1  1  1  1  1  1  1  0  0
 rec     0  1  1  1  1  1  1  1  1  1  1  1  1  0
-lambda  0  0  1  1  1  1  0  0  0  0  0  0  0  0
-dom     0  0  1  0  0  0  0  0  0  0  0  0  0  0
-var     0  0  1  0  1  0  0  0  0  0  0  0  0  0
-rng     0  0  0  1  1  1  0  0  0  0  0  0  0  0
-ptype1  0  0  0  1  1  0  0  0  0  0  0  0  0  0
-rel     0  0  0  1  0  0  0  0  0  0  0  0  0  0
-arg0    0  0  0  0  1  0  0  0  0  0  0  0  0  0
+lambda  0  0  0  0  0  1  1  1  1  0  0  0  0  0
+dom     0  0  0  0  0  1  0  0  0  0  0  0  0  0
+var     0  0  0  0  0  1  0  1  0  0  0  0  0  0
+rng     0  0  0  0  0  0  1  1  1  0  0  0  0  0
+ptype1  0  0  0  0  0  0  1  1  0  0  0  0  0  0
+rel     0  0  0  0  0  0  1  0  0  0  0  0  0  0
+arg0    0  0  0  0  0  0  0  1  0  0  0  0  0  0
 ------  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 
 
@@ -392,129 +456,212 @@ Example 13:
 dog(a)
 
 
-[[(3, 'lambda', 1), (4, 'dom', 1), (5, 'var', 1), (1, 'Ind_n', 1)],
- [(4, 'dom', 0),
-  (5, 'var', 0),
-  (1, 'Ind_n', 0),
-  (6, 'rng', 1),
-  (7, 'ptype1', 1),
-  (8, 'rel', 1),
-  (0, 'dog_n', 1)],
- [(8, 'rel', 0), (0, 'dog_n', 0), (9, 'arg0', 1), (5, 'var', 1)],
- [(7, 'ptype1', 0), (9, 'arg0', 0), (5, 'var', 0)],
- [(3, 'lambda', 0), (6, 'rng', 0)]]
+[[(np.int64(3), 'lambda', np.int64(1)),
+  (np.int64(4), 'dom', np.int64(1)),
+  (np.int64(5), 'var', np.int64(1)),
+  (np.int64(1), 'Ind_n', np.int64(1))],
+ [(np.int64(4), 'dom', np.int64(0)),
+  (np.int64(5), 'var', np.int64(0)),
+  (np.int64(1), 'Ind_n', np.int64(0)),
+  (np.int64(6), 'rng', np.int64(1)),
+  (np.int64(7), 'ptype1', np.int64(1)),
+  (np.int64(8), 'rel', np.int64(1)),
+  (np.int64(0), 'dog_n', np.int64(1))],
+ [(np.int64(8), 'rel', np.int64(0)),
+  (np.int64(0), 'dog_n', np.int64(0)),
+  (np.int64(9), 'arg0', np.int64(1)),
+  (np.int64(5), 'var', np.int64(1))],
+ [(np.int64(7), 'ptype1', np.int64(0)),
+  (np.int64(9), 'arg0', np.int64(0)),
+  (np.int64(5), 'var', np.int64(0))],
+ [(np.int64(3), 'lambda', np.int64(0)), (np.int64(6), 'rng', np.int64(0))]]
 
 
 [[(2, 'a', 1)]]
 
 
-[[(7, 'ptype1', 1), (8, 'rel', 1), (0, 'dog_n', 1)],
- [(8, 'rel', 0), (0, 'dog_n', 0), (9, 'arg0', 1), (2, 'a', 1)],
- [(7, 'ptype1', 0), (9, 'arg0', 0), (2, 'a', 0)]]
+[[(np.int64(7), 'ptype1', np.int64(1)),
+  (np.int64(8), 'rel', np.int64(1)),
+  (np.int64(0), 'dog_n', np.int64(1))],
+ [(np.int64(8), 'rel', np.int64(0)),
+  (np.int64(0), 'dog_n', np.int64(0)),
+  (np.int64(9), 'arg0', np.int64(1)),
+  (np.int64(2), 'a', np.int64(1))],
+ [(np.int64(7), 'ptype1', np.int64(0)),
+  (np.int64(9), 'arg0', np.int64(0)),
+  (np.int64(2), 'a', np.int64(0))]]
 
 
 Example 14:
 
-[[(11, 'rec', 1), (5, 'field', 1), (6, 'label', 1), (1, 'l_e', 1)],
- [(6, 'label', 0), (1, 'l_e', 0), (7, 'value', 1), (4, 's1', 1)],
- [(7, 'value', 0), (4, 's1', 0), (5, 'field', 0)],
- [(8, 'field', 1), (9, 'label', 1), (0, 'l_x', 1)],
- [(9, 'label', 0), (0, 'l_x', 0), (10, 'value', 1), (2, 'a', 1)],
- [(10, 'value', 0), (2, 'a', 0), (8, 'field', 0)],
- [(11, 'rec', 0)]]
+[[(np.int64(11), 'rec', np.int64(1)),
+  (np.int64(5), 'field', np.int64(1)),
+  (np.int64(6), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(6), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(7), 'value', np.int64(1)),
+  (np.int64(2), 'a', np.int64(1))],
+ [(np.int64(7), 'value', np.int64(0)),
+  (np.int64(2), 'a', np.int64(0)),
+  (np.int64(5), 'field', np.int64(0))],
+ [(np.int64(8), 'field', np.int64(1)),
+  (np.int64(9), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(9), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(10), 'value', np.int64(1)),
+  (np.int64(4), 's1', np.int64(1))],
+ [(np.int64(10), 'value', np.int64(0)),
+  (np.int64(4), 's1', np.int64(0)),
+  (np.int64(8), 'field', np.int64(0))],
+ [(np.int64(11), 'rec', np.int64(0))]]
 
 
 Example 15:
 
-{l_e : (lambda v:Ind . dog(v), [l_x]), l_x : Ind}
-{l_e : (lambda v:Ind . cat(v), [l_x]), l_x : Ind}
-[[(11, 'rec', 1), (5, 'field', 1), (6, 'label', 1), (1, 'l_e', 1)],
- [(6, 'label', 0),
-  (1, 'l_e', 0),
-  (7, 'value', 1),
-  (12, 'lambda', 1),
-  (13, 'dom', 1),
-  (14, 'var', 1),
-  (2, 'Ind_n', 1)],
- [(13, 'dom', 0),
-  (14, 'var', 0),
-  (2, 'Ind_n', 0),
-  (15, 'rng', 1),
-  (16, 'ptype1', 1),
-  (17, 'rel', 1),
-  (3, 'dog_n', 1)],
- [(17, 'rel', 0), (3, 'dog_n', 0), (18, 'arg0', 1), (14, 'var', 1)],
- [(16, 'ptype1', 0), (18, 'arg0', 0), (14, 'var', 0)],
- [(12, 'lambda', 0), (15, 'rng', 0)],
- [(0, 'l_x', 1)],
- [(0, 'l_x', 0)],
- [(7, 'value', 0), (5, 'field', 0)],
- [(8, 'field', 1), (9, 'label', 1), (0, 'l_x', 1)],
- [(9, 'label', 0), (0, 'l_x', 0), (10, 'value', 1), (2, 'Ind_n', 1)],
- [(10, 'value', 0), (2, 'Ind_n', 0), (8, 'field', 0)],
- [(11, 'rec', 0)]]
+{l_x : Ind, l_e : (lambda v:Ind . dog(v), [l_x])}
+{l_x : Ind, l_e : (lambda v:Ind . cat(v), [l_x])}
+[[(np.int64(11), 'rec', np.int64(1)),
+  (np.int64(5), 'field', np.int64(1)),
+  (np.int64(6), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(6), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(7), 'value', np.int64(1)),
+  (np.int64(2), 'Ind_n', np.int64(1))],
+ [(np.int64(7), 'value', np.int64(0)),
+  (np.int64(2), 'Ind_n', np.int64(0)),
+  (np.int64(5), 'field', np.int64(0))],
+ [(np.int64(8), 'field', np.int64(1)),
+  (np.int64(9), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(9), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(10), 'value', np.int64(1)),
+  (np.int64(12), 'lambda', np.int64(1)),
+  (np.int64(13), 'dom', np.int64(1)),
+  (np.int64(14), 'var', np.int64(1)),
+  (np.int64(2), 'Ind_n', np.int64(1))],
+ [(np.int64(13), 'dom', np.int64(0)),
+  (np.int64(14), 'var', np.int64(0)),
+  (np.int64(2), 'Ind_n', np.int64(0)),
+  (np.int64(15), 'rng', np.int64(1)),
+  (np.int64(16), 'ptype1', np.int64(1)),
+  (np.int64(17), 'rel', np.int64(1)),
+  (np.int64(3), 'dog_n', np.int64(1))],
+ [(np.int64(17), 'rel', np.int64(0)),
+  (np.int64(3), 'dog_n', np.int64(0)),
+  (np.int64(18), 'arg0', np.int64(1)),
+  (np.int64(14), 'var', np.int64(1))],
+ [(np.int64(16), 'ptype1', np.int64(0)),
+  (np.int64(18), 'arg0', np.int64(0)),
+  (np.int64(14), 'var', np.int64(0))],
+ [(np.int64(12), 'lambda', np.int64(0)), (np.int64(15), 'rng', np.int64(0))],
+ [(np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(0), 'l_x', np.int64(0))],
+ [(np.int64(10), 'value', np.int64(0)), (np.int64(8), 'field', np.int64(0))],
+ [(np.int64(11), 'rec', np.int64(0))]]
 
 
-[[(11, 'rec', 1), (5, 'field', 1), (6, 'label', 1), (1, 'l_e', 1)],
- [(6, 'label', 0),
-  (1, 'l_e', 0),
-  (7, 'value', 1),
-  (12, 'lambda', 1),
-  (13, 'dom', 1),
-  (14, 'var', 1),
-  (2, 'Ind_n', 1)],
- [(13, 'dom', 0),
-  (14, 'var', 0),
-  (2, 'Ind_n', 0),
-  (15, 'rng', 1),
-  (16, 'ptype1', 1),
-  (17, 'rel', 1),
-  (4, 'cat_n', 1)],
- [(17, 'rel', 0), (4, 'cat_n', 0), (18, 'arg0', 1), (14, 'var', 1)],
- [(16, 'ptype1', 0), (18, 'arg0', 0), (14, 'var', 0)],
- [(12, 'lambda', 0), (15, 'rng', 0)],
- [(0, 'l_x', 1)],
- [(0, 'l_x', 0)],
- [(7, 'value', 0), (5, 'field', 0)],
- [(8, 'field', 1), (9, 'label', 1), (0, 'l_x', 1)],
- [(9, 'label', 0), (0, 'l_x', 0), (10, 'value', 1), (2, 'Ind_n', 1)],
- [(10, 'value', 0), (2, 'Ind_n', 0), (8, 'field', 0)],
- [(11, 'rec', 0)]]
+[[(np.int64(11), 'rec', np.int64(1)),
+  (np.int64(5), 'field', np.int64(1)),
+  (np.int64(6), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(6), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(7), 'value', np.int64(1)),
+  (np.int64(2), 'Ind_n', np.int64(1))],
+ [(np.int64(7), 'value', np.int64(0)),
+  (np.int64(2), 'Ind_n', np.int64(0)),
+  (np.int64(5), 'field', np.int64(0))],
+ [(np.int64(8), 'field', np.int64(1)),
+  (np.int64(9), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(9), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(10), 'value', np.int64(1)),
+  (np.int64(12), 'lambda', np.int64(1)),
+  (np.int64(13), 'dom', np.int64(1)),
+  (np.int64(14), 'var', np.int64(1)),
+  (np.int64(2), 'Ind_n', np.int64(1))],
+ [(np.int64(13), 'dom', np.int64(0)),
+  (np.int64(14), 'var', np.int64(0)),
+  (np.int64(2), 'Ind_n', np.int64(0)),
+  (np.int64(15), 'rng', np.int64(1)),
+  (np.int64(16), 'ptype1', np.int64(1)),
+  (np.int64(17), 'rel', np.int64(1)),
+  (np.int64(4), 'cat_n', np.int64(1))],
+ [(np.int64(17), 'rel', np.int64(0)),
+  (np.int64(4), 'cat_n', np.int64(0)),
+  (np.int64(18), 'arg0', np.int64(1)),
+  (np.int64(14), 'var', np.int64(1))],
+ [(np.int64(16), 'ptype1', np.int64(0)),
+  (np.int64(18), 'arg0', np.int64(0)),
+  (np.int64(14), 'var', np.int64(0))],
+ [(np.int64(12), 'lambda', np.int64(0)), (np.int64(15), 'rng', np.int64(0))],
+ [(np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(0), 'l_x', np.int64(0))],
+ [(np.int64(10), 'value', np.int64(0)), (np.int64(8), 'field', np.int64(0))],
+ [(np.int64(11), 'rec', np.int64(0))]]
 
 
 Example 16:
 
-[[(12, 'rec', 1), (6, 'field', 1), (7, 'label', 1), (1, 'l_e', 1)],
- [(7, 'label', 0),
-  (1, 'l_e', 0),
-  (8, 'value', 1),
-  (13, 'ptype1', 1),
-  (14, 'rel', 1),
-  (5, 'dog_n', 1)],
- [(14, 'rel', 0), (5, 'dog_n', 0), (15, 'arg0', 1), (2, 'a', 1)],
- [(13, 'ptype1', 0), (15, 'arg0', 0), (2, 'a', 0)],
- [(8, 'value', 0), (6, 'field', 0)],
- [(9, 'field', 1), (10, 'label', 1), (0, 'l_x', 1)],
- [(10, 'label', 0), (0, 'l_x', 0), (11, 'value', 1), (4, 'Ind_n', 1)],
- [(11, 'value', 0), (4, 'Ind_n', 0), (9, 'field', 0)],
- [(12, 'rec', 0)]]
+[[(np.int64(12), 'rec', np.int64(1)),
+  (np.int64(6), 'field', np.int64(1)),
+  (np.int64(7), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(7), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(8), 'value', np.int64(1)),
+  (np.int64(4), 'Ind_n', np.int64(1))],
+ [(np.int64(8), 'value', np.int64(0)),
+  (np.int64(4), 'Ind_n', np.int64(0)),
+  (np.int64(6), 'field', np.int64(0))],
+ [(np.int64(9), 'field', np.int64(1)),
+  (np.int64(10), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(10), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(11), 'value', np.int64(1)),
+  (np.int64(13), 'ptype1', np.int64(1)),
+  (np.int64(14), 'rel', np.int64(1)),
+  (np.int64(5), 'dog_n', np.int64(1))],
+ [(np.int64(14), 'rel', np.int64(0)),
+  (np.int64(5), 'dog_n', np.int64(0)),
+  (np.int64(15), 'arg0', np.int64(1)),
+  (np.int64(2), 'a', np.int64(1))],
+ [(np.int64(13), 'ptype1', np.int64(0)),
+  (np.int64(15), 'arg0', np.int64(0)),
+  (np.int64(2), 'a', np.int64(0))],
+ [(np.int64(11), 'value', np.int64(0)), (np.int64(9), 'field', np.int64(0))],
+ [(np.int64(12), 'rec', np.int64(0))]]
 
 
-[[(13, 'ptype1', 1), (14, 'rel', 1), (5, 'dog_n', 1), (3, 's', 1)],
- [(14, 'rel', 0), (5, 'dog_n', 0), (15, 'arg0', 1), (2, 'a', 1)],
- [(13, 'ptype1', 0), (15, 'arg0', 0), (2, 'a', 0)],
- [(3, 's', 0)],
- [(4, 'Ind_n', 1), (2, 'a', 1)],
- [(4, 'Ind_n', 0), (2, 'a', 0)]]
+[[(np.int64(4), 'Ind_n', np.int64(1)), (np.int64(2), 'a', np.int64(1))],
+ [(np.int64(4), 'Ind_n', np.int64(0)), (np.int64(2), 'a', np.int64(0))],
+ [(np.int64(13), 'ptype1', np.int64(1)),
+  (np.int64(14), 'rel', np.int64(1)),
+  (np.int64(5), 'dog_n', np.int64(1)),
+  (np.int64(3), 's', np.int64(1))],
+ [(np.int64(14), 'rel', np.int64(0)),
+  (np.int64(5), 'dog_n', np.int64(0)),
+  (np.int64(15), 'arg0', np.int64(1)),
+  (np.int64(2), 'a', np.int64(1))],
+ [(np.int64(13), 'ptype1', np.int64(0)),
+  (np.int64(15), 'arg0', np.int64(0)),
+  (np.int64(2), 'a', np.int64(0))],
+ [(np.int64(3), 's', np.int64(0))]]
 
 
 ------  -  -  -  -  -  -  -
 l_x     0  0  0  0  0  0  0
 l_e     0  0  0  0  0  0  0
-a       0  0  1  0  0  1  0
-s       0  1  1  1  0  0  0
-Ind_n   0  0  0  0  0  1  0
-dog_n   0  1  0  0  0  0  0
+a       0  1  0  0  1  0  0
+s       0  0  0  1  1  1  0
+Ind_n   0  1  0  0  0  0  0
+dog_n   0  0  0  1  0  0  0
 field   0  0  0  0  0  0  0
 label   0  0  0  0  0  0  0
 value   0  0  0  0  0  0  0
@@ -522,66 +669,95 @@ field   0  0  0  0  0  0  0
 label   0  0  0  0  0  0  0
 value   0  0  0  0  0  0  0
 rec     0  0  0  0  0  0  0
-ptype1  0  1  1  0  0  0  0
-rel     0  1  0  0  0  0  0
-arg0    0  0  1  0  0  0  0
+ptype1  0  0  0  1  1  0  0
+rel     0  0  0  1  0  0  0
+arg0    0  0  0  0  1  0  0
 ------  -  -  -  -  -  -  -
-[[(12, 'rec', 1), (6, 'field', 1), (7, 'label', 1), (16, 'l_type', 1)],
- [(7, 'label', 0),
-  (16, 'l_type', 0),
-  (8, 'value', 1),
-  (24, 'rec', 1),
-  (18, 'field', 1),
-  (19, 'label', 1),
-  (1, 'l_e', 1)],
- [(19, 'label', 0),
-  (1, 'l_e', 0),
-  (20, 'value', 1),
-  (25, 'lambda', 1),
-  (26, 'dom', 1),
-  (27, 'var', 1),
-  (4, 'Ind_n', 1)],
- [(26, 'dom', 0),
-  (27, 'var', 0),
-  (4, 'Ind_n', 0),
-  (28, 'rng', 1),
-  (13, 'ptype1', 1),
-  (14, 'rel', 1),
-  (5, 'dog_n', 1)],
- [(14, 'rel', 0), (5, 'dog_n', 0), (15, 'arg0', 1), (27, 'var', 1)],
- [(13, 'ptype1', 0), (15, 'arg0', 0), (27, 'var', 0)],
- [(25, 'lambda', 0), (28, 'rng', 0)],
- [(0, 'l_x', 1)],
- [(0, 'l_x', 0)],
- [(20, 'value', 0), (18, 'field', 0)],
- [(21, 'field', 1), (22, 'label', 1), (0, 'l_x', 1)],
- [(22, 'label', 0), (0, 'l_x', 0), (23, 'value', 1), (4, 'Ind_n', 1)],
- [(23, 'value', 0), (4, 'Ind_n', 0), (21, 'field', 0)],
- [(24, 'rec', 0)],
- [(8, 'value', 0), (6, 'field', 0)],
- [(9, 'field', 1), (10, 'label', 1), (17, 'l_obj', 1)],
- [(10, 'label', 0),
-  (17, 'l_obj', 0),
-  (11, 'value', 1),
-  (24, 'rec', 1),
-  (18, 'field', 1),
-  (19, 'label', 1),
-  (1, 'l_e', 1)],
- [(19, 'label', 0), (1, 'l_e', 0), (20, 'value', 1), (3, 's', 1)],
- [(20, 'value', 0), (3, 's', 0), (18, 'field', 0)],
- [(21, 'field', 1), (22, 'label', 1), (0, 'l_x', 1)],
- [(22, 'label', 0), (0, 'l_x', 0), (23, 'value', 1), (2, 'a', 1)],
- [(23, 'value', 0), (2, 'a', 0), (21, 'field', 0)],
- [(24, 'rec', 0)],
- [(11, 'value', 0), (9, 'field', 0)],
- [(12, 'rec', 0)]]
+[[(np.int64(12), 'rec', np.int64(1)),
+  (np.int64(6), 'field', np.int64(1)),
+  (np.int64(7), 'label', np.int64(1)),
+  (np.int64(16), 'l_type', np.int64(1))],
+ [(np.int64(7), 'label', np.int64(0)),
+  (np.int64(16), 'l_type', np.int64(0)),
+  (np.int64(8), 'value', np.int64(1)),
+  (np.int64(24), 'rec', np.int64(1)),
+  (np.int64(18), 'field', np.int64(1)),
+  (np.int64(19), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(19), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(20), 'value', np.int64(1)),
+  (np.int64(4), 'Ind_n', np.int64(1))],
+ [(np.int64(20), 'value', np.int64(0)),
+  (np.int64(4), 'Ind_n', np.int64(0)),
+  (np.int64(18), 'field', np.int64(0))],
+ [(np.int64(21), 'field', np.int64(1)),
+  (np.int64(22), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(22), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(23), 'value', np.int64(1)),
+  (np.int64(25), 'lambda', np.int64(1)),
+  (np.int64(26), 'dom', np.int64(1)),
+  (np.int64(27), 'var', np.int64(1)),
+  (np.int64(4), 'Ind_n', np.int64(1))],
+ [(np.int64(26), 'dom', np.int64(0)),
+  (np.int64(27), 'var', np.int64(0)),
+  (np.int64(4), 'Ind_n', np.int64(0)),
+  (np.int64(28), 'rng', np.int64(1)),
+  (np.int64(13), 'ptype1', np.int64(1)),
+  (np.int64(14), 'rel', np.int64(1)),
+  (np.int64(5), 'dog_n', np.int64(1))],
+ [(np.int64(14), 'rel', np.int64(0)),
+  (np.int64(5), 'dog_n', np.int64(0)),
+  (np.int64(15), 'arg0', np.int64(1)),
+  (np.int64(27), 'var', np.int64(1))],
+ [(np.int64(13), 'ptype1', np.int64(0)),
+  (np.int64(15), 'arg0', np.int64(0)),
+  (np.int64(27), 'var', np.int64(0))],
+ [(np.int64(25), 'lambda', np.int64(0)), (np.int64(28), 'rng', np.int64(0))],
+ [(np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(0), 'l_x', np.int64(0))],
+ [(np.int64(23), 'value', np.int64(0)), (np.int64(21), 'field', np.int64(0))],
+ [(np.int64(24), 'rec', np.int64(0))],
+ [(np.int64(8), 'value', np.int64(0)), (np.int64(6), 'field', np.int64(0))],
+ [(np.int64(9), 'field', np.int64(1)),
+  (np.int64(10), 'label', np.int64(1)),
+  (np.int64(17), 'l_obj', np.int64(1))],
+ [(np.int64(10), 'label', np.int64(0)),
+  (np.int64(17), 'l_obj', np.int64(0)),
+  (np.int64(11), 'value', np.int64(1)),
+  (np.int64(24), 'rec', np.int64(1)),
+  (np.int64(18), 'field', np.int64(1)),
+  (np.int64(19), 'label', np.int64(1)),
+  (np.int64(0), 'l_x', np.int64(1))],
+ [(np.int64(19), 'label', np.int64(0)),
+  (np.int64(0), 'l_x', np.int64(0)),
+  (np.int64(20), 'value', np.int64(1)),
+  (np.int64(2), 'a', np.int64(1))],
+ [(np.int64(20), 'value', np.int64(0)),
+  (np.int64(2), 'a', np.int64(0)),
+  (np.int64(18), 'field', np.int64(0))],
+ [(np.int64(21), 'field', np.int64(1)),
+  (np.int64(22), 'label', np.int64(1)),
+  (np.int64(1), 'l_e', np.int64(1))],
+ [(np.int64(22), 'label', np.int64(0)),
+  (np.int64(1), 'l_e', np.int64(0)),
+  (np.int64(23), 'value', np.int64(1)),
+  (np.int64(3), 's', np.int64(1))],
+ [(np.int64(23), 'value', np.int64(0)),
+  (np.int64(3), 's', np.int64(0)),
+  (np.int64(21), 'field', np.int64(0))],
+ [(np.int64(24), 'rec', np.int64(0))],
+ [(np.int64(11), 'value', np.int64(0)), (np.int64(9), 'field', np.int64(0))],
+ [(np.int64(12), 'rec', np.int64(0))]]
 ------  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-l_x     0  0  0  0  0  0  0  0  1  0  0  1  0  0  0  0  0  0  0  0  1  0  0  0  0  0
-l_e     0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0
-a       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0
-s       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0
-Ind_n   0  0  0  1  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
-dog_n   0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+l_x     0  0  1  0  0  0  0  0  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0  0  0  0
+l_e     0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0
+a       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0
+s       0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0
+Ind_n   0  0  0  1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+dog_n   0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 field   0  1  1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0  0  0  0  0  0  0  0  0
 label   0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 value   0  0  1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0  0  0  0  0  0  0  0  0
@@ -589,20 +765,20 @@ field   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1  1  1  1  1  1  1  
 label   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0
 value   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1  1  1  1  1  1  0  0
 rec     0  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  0
-ptype1  0  0  0  0  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-rel     0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-arg0    0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ptype1  0  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+rel     0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+arg0    0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 l_type  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 l_obj   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0
-field   0  0  1  1  1  1  1  1  1  1  0  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0
+field   0  0  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0
 label   0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0
-value   0  0  0  1  1  1  1  1  1  1  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0
-field   0  0  0  0  0  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0  1  1  0  0  0  0
-label   0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  1  0  0  0  0  0
-value   0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  1  0  0  0  0
+value   0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0
+field   0  0  0  0  0  1  1  1  1  1  1  1  1  0  0  0  0  0  0  0  1  1  0  0  0  0
+label   0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0
+value   0  0  0  0  0  0  1  1  1  1  1  1  1  0  0  0  0  0  0  0  0  1  0  0  0  0
 rec     0  0  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0  1  1  1  1  1  1  0  0  0
-lambda  0  0  0  1  1  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-dom     0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-var     0  0  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-rng     0  0  0  0  1  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+lambda  0  0  0  0  0  0  1  1  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+dom     0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+var     0  0  0  0  0  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+rng     0  0  0  0  0  0  0  1  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 ------  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -

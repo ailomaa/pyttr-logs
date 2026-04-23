@@ -92,14 +92,14 @@ _____________________________________________
 
 True
 True
-{c : (lambda v:Ind . man(v), [x]), x : Ind}
-{c = _e2, x = _a4}
+{x : Ind, c : (lambda v:Ind . man(v), [x])}
+{x = _a4, c = _e2}
 
 M:
 _____________________________________________
-man(_a4): [_e2]
 man(j): [_e1]
 Ind: [j, k, l, m, n, _a0, _a4]
+man(_a4): [_e2]
 _____________________________________________
 
 True
@@ -107,16 +107,16 @@ True
 True
 True
 True
-{c : {c : (lambda v:Ind . man(v), [x])}, x : Ind}
+{x : Ind, c : {c : (lambda v:Ind . man(v), [x])}}
 False
 True
 True
 False
 True
 True
-{y = _a6, x = _a6, e = {e = _e4}}
+{x = _a6, y = _a6, e = {e = _e4}}
 True
-[{y = j, x = j, e = {e = _e1}}]
+[{x = j, y = j, e = {e = _e1}}]
 True
 False
 True
@@ -218,21 +218,21 @@ False
 
 Example 64:
 
-x not a label in {}
-lambda v:Ind . Ind_v(None): badly typed function application
 y not a label in {}
 lambda v:Ind . Ind_v(None): badly typed function application
-Unresolved dependency in {y : (lambda v:Ind . Ind_v, [x]), x : (lambda v:Ind . Ind_v, [y])}
+x not a label in {}
+lambda v:Ind . Ind_v(None): badly typed function application
+Unresolved dependency in {x : (lambda v:Ind . Ind_v, [y]), y : (lambda v:Ind . Ind_v, [x])}
 None
 
 
 Example 65:
 
-x not a label in {}
-lambda v:Ind . Ind_v(None): badly typed function application
 y not a label in {}
 lambda v:Ind . Ind_v(None): badly typed function application
-Unresolved dependency in {y : (lambda v:Ind . Ind_v, [x]), x : (lambda v:Ind . Ind_v, [y])}
+x not a label in {}
+lambda v:Ind . Ind_v(None): badly typed function application
+Unresolved dependency in {x : (lambda v:Ind . Ind_v, [y]), y : (lambda v:Ind . Ind_v, [x])}
 None
 
 
@@ -268,17 +268,17 @@ True
 
 Example 72:
 
-{y = h67, x = h68, z = [h68, +, h67]}
+{x = h67, y = h68, z = [h67, +, h68]}
 
 
 Example 73:
 
-{y = h69, x = [j], z = [[j], +, h69]}
+{x = [j], y = h69, z = [[j], +, h69]}
 
 
 Example 74:
 
-{y = [m], x = [j], z = [j, m]}
+{x = [j], y = [m], z = [j, m]}
 
 
 Example 75:
@@ -293,12 +293,12 @@ False
 
 Example 77:
 
-{y = h76, w = h77, x = h78, z = [h78, @, h76]}
+{x = h76, y = h77, w = h78, z = [h76, @, h77]}
 
 
 Example 78:
 
-{y : Ind, w : Ind, x : (Ind->RecTy), z : (lambda f:(Ind->RecTy) . lambda v:Ind . RecTy_[f, @, v], [x, y])}
+{x : (Ind->RecTy), y : Ind, w : Ind, z : (lambda f:(Ind->RecTy) . lambda v:Ind . RecTy_[f, @, v], [x, y])}
 
 
 Example 79:
@@ -308,7 +308,7 @@ True
 
 Example 80:
 
-{y = h82, w = h83, x = h84, z = [h84, @, h82]}
+{x = h82, y = h83, w = h84, z = [h82, @, h83]}
 
 
 Example 81:
@@ -338,12 +338,12 @@ Example 85:
 
 Example 86:
 
-{y : Ind, x : Ind}
+{x : Ind, y : Ind}
 
 
 Example 87:
 
-{y : Ind, x : Ind}
+{x : Ind, y : Ind}
 
 
 Example 88:
@@ -378,17 +378,17 @@ Example 93:
 
 Example 94:
 
-{y : (lambda v0:Ind . {c : man(v0), a : Ind}, [x]), w : Ind, x : Ind, z : Ind}
+{x : Ind, y : (lambda v0:Ind . {a : Ind, c : man(v0)}, [x]), z : Ind, w : Ind}
 
 
 Example 95:
 
-{y : (lambda v1:Ind . lambda v2:Ind . {c : (man(v1)&man(v2)), a : Ind}, [x, z]), x : Ind, z : Ind}
+{x : Ind, y : (lambda v1:Ind . lambda v2:Ind . {a : Ind, c : (man(v1)&man(v2))}, [x, z]), z : Ind}
 
 
 Example 96:
 
-{y : (lambda v3:Ind . lambda v4:Ind . {c : (man(v3)&man(v4)), a : Ind}, [x, z]), x : Ind_j, z : Ind_j}
+{x : Ind_j, y : (lambda v3:Ind . lambda v4:Ind . {a : Ind, c : (man(v3)&man(v4))}, [x, z]), z : Ind_j}
 
 
 Example 97:
@@ -408,8 +408,8 @@ Example 99:
 
 Example 100:
 
-{x : Ind, e : (lambda v5:Ind . (man(v5)&man(j)), [x])}
-{x : Ind, e : (lambda v6:Ind . (man(j)&man(v6)), [x])}
+{e : (lambda v5:Ind . (man(v5)&man(j)), [x]), x : Ind}
+{e : (lambda v6:Ind . (man(j)&man(v6)), [x]), x : Ind}
 
 
 Example 101:
@@ -424,7 +424,7 @@ Example 102:
 
 Example 103:
 
-{agenda : [Ty]_[], latest_move : (lambda v:Ind . {e : run(v)}, [x]), x : Ind}
+{x : Ind, agenda : [Ty]_[], latest_move : (lambda v:Ind . {e : run(v)}, [x])}
 
 
 Example 104:
@@ -435,20 +435,20 @@ Example 104:
 
 Example 105:
 
-{y : Ind, x : Ind, e : (lambda v8:Ind . lambda v9:Ind . (run(v8)&man(v9)), [x, y])}
-{y : Ind, x : Ind, e : (lambda v:Ind . man(v), [y])}
+{e : (lambda v8:Ind . lambda v9:Ind . (run(v8)&man(v9)), [x, y]), x : Ind, y : Ind}
+{e : (lambda v:Ind . man(v), [y]), x : Ind, y : Ind}
 
 
 Example 106:
 
-{y : Ind, x : Ind, e : (lambda v10:Ind . lambda v11:Ind . ({y : Ind, e : run(v10)}&man(v11)), [x, y])}
-{y : Ind, x : Ind, e : (lambda v:Ind . man(v), [y])}
+{e : (lambda v10:Ind . lambda v11:Ind . ({y : Ind, e : run(v10)}&man(v11)), [x, y]), x : Ind, y : Ind}
+{e : (lambda v:Ind . man(v), [y]), x : Ind, y : Ind}
 
 
 Example 107:
 
-{y : Ind, x : Ind, e : (lambda v12:Ind . lambda v13:Ind . {y : Ind, x : Ind, e : (run(v12)&man(v13))}, [x, y])}
-{y : Ind, x : Ind, e : (lambda v:Ind . {x : Ind, e : man(v)}, [y])}
+{e : (lambda v12:Ind . lambda v13:Ind . {e : (run(v12)&man(v13)), y : Ind, x : Ind}, [x, y]), x : Ind, y : Ind}
+{e : (lambda v:Ind . {x : Ind, e : man(v)}, [y]), x : Ind, y : Ind}
 
 
 Example 108:

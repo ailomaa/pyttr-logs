@@ -3,8 +3,8 @@
 {g = a, h = d}
 a
 {f = {f = {ff = z, gg = b}, g = c}, g = {h = {g = z, h = d}}}
-{g.h.h = d, g.h.g = a, f.g = c, f.f.gg = b, f.f.ff = a}
+{f.f.ff = a, f.f.gg = b, f.g = c, g.h.g = a, g.h.h = d}
 {f = {f = {ff = a, gg = b}, g = c}, g = {h = {g = a, h = d}}}
 {g = {h = {g = a, h = d}}, z = {f = {ff = a, gg = b}, g = c}}
-{x.a = b, g.h.h = d, g.h.g = a, f.g = c, f.f.ff = a}
+{f.f.ff = a, f.g = c, g.h.g = a, g.h.h = d, x.a = b}
 {f = {f = {ff = a}, g = c}, g = {h = {g = a, h = d}}, x = {a = b}}
