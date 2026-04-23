@@ -8,7 +8,7 @@ example scripts run propertly.
 The second commit shows output from the pyttr example scripts when running them
 with python 3.12 and having done the following edits to the example scripts: https://github.com/robincooper/pyttr/pull/5
 
-See the diff here: https://github.com/ailomaa/pyttr-logs/commit/9c436c426bc3b48d993032fed0eff1920e036a18
+See the diff in the output between the python and code versions here: https://github.com/ailomaa/pyttr-logs/commit/9c436c426bc3b48d993032fed0eff1920e036a18
 
 - the output from `example-neurons.py` was identical in both cases
 - the diff in the output from `example-records.py` and `example-types.py` has to do with indeterministic ordering caused by how python handles certain array types
